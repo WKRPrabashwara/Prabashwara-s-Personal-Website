@@ -115,6 +115,31 @@ ul {
   transition: 0.3s;
 }
 
+.sub-heading {
+  color: var(--heading-color);
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+  border-left: 3px solid var(--heading-color);
+  padding: 0.13rem 0.75rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.heading {
+  color: var(--heading-color);
+  font-size: 3rem;
+  font-family: "Abril Fatface", cursive;
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+.text {
+  color: var(--text-color);
+  font-size: 0.9rem;
+  margin: 2rem 0;
+}
+
 /* --------------- Navbar Styling --------------- */
 
 header {
@@ -220,6 +245,86 @@ header.scrolled .logo {
 }
 
 /* --------------- Showcase Area Styling --------------- */
+
+.showcase-area {
+  padding: 120px 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+.showcase-area .container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  height: calc(100vh -120px);
+  max-height: 600px;
+  align-items: center;
+  /* padding-top: 250px; */
+}
+
+.showcase-area .sub-heading {
+  margin-bottom: 0.7rem;
+}
+
+.showcase-area .heading {
+  font-size: 3.5rem;
+}
+
+.showcase-area .text {
+  margin: 0.8rem 0;
+}
+
+.cta {
+  margin-top: 3.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.cta .btn {
+  margin-right: 1.5rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.9rem 1.75rem;
+  border-radius: 17px;
+  background-color: var(--heading-color);
+  color: #ffffff;
+  font-size: 0.85rem;
+  letter-spacing: 0.4px;
+  text-transform: capitalize;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: #222222;
+}
+
+.btn.secondary-btn {
+  position: relative;
+  background-color: transparent;
+  color: var(--heading-color);
+  font-weight: 500;
+  font-size: 0.9rem;
+  letter-spacing: 0px;
+  border-bottom: 2.5px solid #e4e4e4;
+  border-radius: 0px;
+  padding: 0.15rem 0;
+}
+
+.btn.secondary-btn::before {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2.5px;
+  bottom: -2.25px;
+  left: 0;
+  background-color: var(--heading-color);
+  transition: 0.3s ease-in-out;
+}
+
+.btn.secondary-btn:hover::before {
+  width: 100%;
+}
 
 /* --------------- About Section Styling --------------- */
 

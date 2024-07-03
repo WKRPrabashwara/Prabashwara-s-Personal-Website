@@ -5,7 +5,9 @@ const first_skill = document.querySelector(".skill:first-child");
 const sk_counters = document.querySelectorAll(".counter span");
 const progress_bars = document.querySelectorAll(".skills svg circle");
 
-const links = document.querySelectorAll(".nav-link")
+const links = document.querySelectorAll(".nav-link");
+
+const humburger = document.querySelector("humburger");
 
 window.addEventListener("scroll", () => {
     activeLink();
@@ -119,3 +121,6 @@ activeLink();
 
 /* --------------- Open & Close Navbar Menu --------------- */
 
+humburger.addEventListener("click", () => {
+    document.body.classList.toggle("open");
+});

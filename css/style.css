@@ -131,7 +131,7 @@ ul {
   color: #ffffff;
   font-size: 0.85rem;
   letter-spacing: 0.4px;
-  min-height: 125px;
+  min-width: 125px;
   text-align: center;
   text-transform: capitalize;
   transition: 0.3s;

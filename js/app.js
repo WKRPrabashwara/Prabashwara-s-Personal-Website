@@ -19,9 +19,9 @@ let sr = ScrollReveal({
     distance: "60px",
 });
 
-sr.reveal(".square", { delay: 600 });
-sr.reveal(".showcase-info", { delay: 600 });
-sr.reveal(".showcase-image", { origin: "top", delay: 700 });
+// sr.reveal(".square", { delay: 600 });
+// sr.reveal(".showcase-info", { delay: 600 });
+// sr.reveal(".showcase-image", { origin: "top", delay: 700 });
 
 /* --------------- Skills Progress Bar Animation --------------- */
 
@@ -38,3 +38,4 @@ sr.reveal(".showcase-image", { origin: "top", delay: 700 });
 /* --------------- Change Page Theme --------------- */
 
 /* --------------- Open & Close Navbar Menu --------------- */
+

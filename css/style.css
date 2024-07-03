@@ -21,6 +21,8 @@
   --shaded-white: #dddddd;
   --almost-white: #eeeeee;
   --white: #ffffff;
+
+  --section-padding: 7rem; 
 }
 
 body {
@@ -105,6 +107,7 @@ ul {
   color: var(--text-color);
   font-size: 0.9rem;
   margin: 2rem 0;
+  line-height: 2.3;
 }
 
 .dots {
@@ -125,6 +128,11 @@ ul {
   letter-spacing: 0.4px;
   text-transform: capitalize;
   transition: 0.3s;
+}
+
+.section {
+  position: relative;
+  padding: var(--section-padding);
 }
 
 /* --------------- Navbar Styling --------------- */
@@ -342,6 +350,13 @@ header.scrolled .logo {
   left: 25%;
   bottom: 120px;
   transform: translate(-50%, -50%);
+}
+
+/* --------------- About Section Styling --------------- */
+
+.about .container {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
 }
 
 /* --------------- 1000px Screens --------------- */

@@ -989,6 +989,31 @@ header.scrolled .logo {
   font-weight: 500;
   color: var(--heading-color);
   outline: none;
+  transition: 0.3s;
+}
+
+.form-input::placeholder {
+  color: var(--text-color);
+}
+
+.form-input:hover {
+  filter: brightness(95%);
+}
+
+.form-input:valid,
+.form-input:focus {
+  filter: brightness(100%);
+  background: #e2e2e2;
+  border-color: #000000;
+}
+
+textarea.form-input {
+  resize: none;
+  min-height: 170px;
+}
+
+.contact-form .form-input {
+  margin-bottom: 1.5rem;
 }
 
 /* --------------- 1000px Screens --------------- */

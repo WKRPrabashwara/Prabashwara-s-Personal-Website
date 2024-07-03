@@ -14,6 +14,15 @@ window.addEventListener("scroll", StickyNavbar);
 
 /* --------------- Reveal Animation --------------- */
 
+let sr = ScrollReveal({
+    duration: 2500,
+    distance: "60px",
+});
+
+sr.reveal(".square", { delay: 600 });
+sr.reveal(".showcase-info", { delay: 600 });
+sr.reveal(".showcase-image", { origin: "top", delay: 700 });
+
 /* --------------- Skills Progress Bar Animation --------------- */
 
 /* --------------- Services Counter Animation --------------- */

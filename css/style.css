@@ -107,6 +107,26 @@ ul {
   margin: 2rem 0;
 }
 
+.dots {
+  width: 112px;
+}
+
+.square {
+  width: 70px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.9rem 1.75rem;
+  border-radius: 17px;
+  background-color: var(--heading-color);
+  color: #ffffff;
+  font-size: 0.85rem;
+  letter-spacing: 0.4px;
+  text-transform: capitalize;
+  transition: 0.3s;
+}
+
 /* --------------- Navbar Styling --------------- */
 
 header {
@@ -215,6 +235,7 @@ header.scrolled .logo {
 /* --------------- Showcase Area Styling --------------- */
 
 .showcase-area {
+  position: relative;
   padding: 120px 0;
   width: 100%;
   overflow: hidden;
@@ -224,7 +245,7 @@ header.scrolled .logo {
   display: grid;
   grid-template-columns: 1fr 550px;
   height: calc(100vh - 120px);
-  max-height: 500px;
+  max-height: 600px;
   align-items: center;
 }
 
@@ -248,18 +269,6 @@ header.scrolled .logo {
 
 .cta .btn {
   margin-right: 1.5rem;
-}
-
-.btn {
-  display: inline-block;
-  padding: 0.9rem 1.75rem;
-  border-radius: 17px;
-  background-color: var(--heading-color);
-  color: #ffffff;
-  font-size: 0.85rem;
-  letter-spacing: 0.4px;
-  text-transform: capitalize;
-  transition: 0.3s;
 }
 
 .btn:hover {
@@ -311,6 +320,28 @@ header.scrolled .logo {
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
+}
+
+.showcase-area .circle {
+  position: absolute;
+  width: 190px;
+  left: 0;
+  top: 80%;
+  transform: translate(-50%, -50%);
+}
+
+.showcase-area .dots {
+  position: absolute;
+  left: 100%;
+  top: 30%;
+  transform: translate(-50%, -50%);
+}
+
+.showcase-area .square {
+  position: absolute;
+  left: 25%;
+  bottom: 120px;
+  transform: translate(-50%, -50%);
 }
 
 /* --------------- 1000px Screens --------------- */

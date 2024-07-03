@@ -509,6 +509,12 @@ header.scrolled .logo {
   stroke-dashoffset: 427;
 }
 
+@keyframes progress {
+  to {
+    stroke-dashoffset: var(--target);
+  }
+}
+
 .counter {
   position: absolute;
   top: 50%;

@@ -75,7 +75,9 @@ function skillsCounter() {
 }
 
 
-/* --------------- Services Counter Animation --------------- */
+/* --------------- Timeline Animation --------------- */
+
+
 
 /* --------------- Portfolio Filter Animation --------------- */
 

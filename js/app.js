@@ -5,7 +5,10 @@ const first_skill = document.querySelector(".skill:first-child");
 const sk_counters = document.querySelectorAll(".counter span");
 const progress_bars = document.querySelectorAll(".skills svg circle");
 
+const links = document.querySelectorAll(".nav-link")
+
 window.addEventListener("scroll", () => {
+    activeLink();
     if (!skillsPlayed) skillsCounter();
 });
 
@@ -16,7 +19,7 @@ function StickyNavbar() {
     header.classList.toggle("scrolled", window.pageYOffset > 0);
 };
 
-StickyNavbar();
+// StickyNavbar();
 
 window.addEventListener("scroll", StickyNavbar);
 
@@ -27,9 +30,9 @@ let sr = ScrollReveal({
     distance: "60px",
 });
 
-// sr.reveal(".square", { delay: 600 });
-// sr.reveal(".showcase-info", { delay: 600 });
-// sr.reveal(".showcase-image", { origin: "top", delay: 700 });
+sr.reveal(".square", { delay: 600 });
+sr.reveal(".showcase-info", { delay: 600 });
+sr.reveal(".showcase-image", { origin: "top", delay: 700 });
 
 /* --------------- Skills Progress Bar Animation --------------- */
 
@@ -92,6 +95,25 @@ const swiper = new Swiper('.swiper', {
 });
 
 /* --------------- Change Active Link On Scroll --------------- */
+
+function activeLink() {
+    let sections = document.querySelectorAll("section[id]");
+    let passSelections = Array.from(sections)
+        .map((sct, i) => {
+            return {
+                y: sct.getBoundingClientRect().top - header.offsetHeight,
+                id: i,
+            };
+        })
+        .filter((sct) => sct.y <= 0);
+
+    let currSectionID = passSelections.at(-1).id;
+
+    links.forEach((l) => l.classList.remove("active"));
+    links[currSectionID].classList.add("active");
+}
+
+activeLink();
 
 /* --------------- Change Page Theme --------------- */
 

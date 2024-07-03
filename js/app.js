@@ -1,5 +1,7 @@
 const header = document.querySelector("header");
 
+const first_skill = document.querySelector(".skill:first-child");
+
 /* --------------- Grab elements from DOM --------------- */
 
 /* --------------- Sticky Navbar --------------- */

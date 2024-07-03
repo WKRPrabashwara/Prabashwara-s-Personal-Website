@@ -446,6 +446,29 @@ header.scrolled .logo {
 
 /* --------------- Skills Section Styling --------------- */
 
+.skills {
+  overflow: hidden;
+}
+
+.skills-box {
+  background-color: var(--text-color);
+  padding: 5rem 6rem;
+  border-radius: 20px;
+  width: 100%;
+}
+
+.skills p {
+  color: #ffffff;
+  letter-spacing: 0.5px;
+}
+
+.box-desc {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  column-gap: 2rem;
+}
+
 /* --------------- 1000px Screens --------------- */
 
 @media (max-width: 1000px) {

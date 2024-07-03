@@ -930,6 +930,67 @@ header.scrolled .logo {
   height: 10px;
 }
 
+/* --------------- Contact Section Styling --------------- */
+
+.contact .container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 4rem;
+}
+
+.mail {
+  color: #474747;
+  font-weight: 500;
+  font-size: 1.1rem;
+  transition: 0.3s;
+}
+
+.mail i {
+  display: inline-block;
+  font-size: 1.5rem;
+  margin-left: 2px;
+  transform: translateY(3px);
+  transition: 0.3s margin-left;
+}
+
+.mail:hover {
+  color: var(--heading-color);
+}
+
+.mail:hover i {
+  margin-left: 10px;
+}
+
+.contact-form {
+  background-color: var(--text-color);
+  border-radius: 20px;
+  padding: 3.5rem 3rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form h3 {
+  color: var(--heading-color);
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin-bottom: 1.6rem;
+  line-height: 0.9;
+}
+
+.form-input {
+  display: inline-block;
+  padding: 0.9rem 1.5rem;
+  background: #e2e2e2;
+  border: 2px solid var(--text-color);
+  width: 100%;
+  border-radius: 17px;
+  font-family: inherit;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--heading-color);
+  outline: none;
+}
+
 /* --------------- 1000px Screens --------------- */
 
 @media (max-width: 1000px) {

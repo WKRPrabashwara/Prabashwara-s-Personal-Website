@@ -135,6 +135,10 @@ ul {
   text-align: center;
   text-transform: capitalize;
   transition: 0.3s;
+  border: none;
+  outline: none;
+  font-family: inherit;
+  cursor: pointer;
 }
 
 .section {
@@ -1014,6 +1018,20 @@ textarea.form-input {
 
 .contact-form .form-input {
   margin-bottom: 1.5rem;
+}
+
+.contact .square {
+  position: absolute;
+  left: 17%;
+  bottom: 15%;
+  transform: translate(-50%, -50%);
+}
+
+.contact .triangle {
+  position: absolute;
+  left: 90%;
+  bottom: 15%;
+  transform: translate(-50%, -50%);
 }
 
 /* --------------- 1000px Screens --------------- */

@@ -205,6 +205,7 @@ header.scrolled .logo {
   cursor: pointer;
   box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.2);
   transition: 0.3s;
+  margin-right: 1rem;
 }
 
 .toggle-btn:hover {
@@ -221,11 +222,10 @@ header.scrolled .logo {
 
 .showcase-area .container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr 550px;
   height: calc(100vh - 120px);
   max-height: 500px;
   align-items: center;
-
 }
 
 .showcase-area .sub-heading {
@@ -233,7 +233,7 @@ header.scrolled .logo {
 }
 
 .showcase-area .heading {
-  font-size: 3.5rem;
+  font-size: 3.2rem;
 }
 
 .showcase-area .text {
@@ -294,17 +294,20 @@ header.scrolled .logo {
 }
 
 .showcase-image {
+  width: 100%;
   position: relative;
   height: 100%;
   min-height: calc(100% + 120px);
-  background-color: var(--text-color);
+  background-image: linear-gradient(124deg,
+      var(--heading-color) -50%,
+      var(--text-color));
   margin-top: -120px;
   border-radius: 0 0 80px 80px;
 }
 
 .showcase-image .person {
   position: absolute;
-  width: 95%;
+  width: 70%;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);

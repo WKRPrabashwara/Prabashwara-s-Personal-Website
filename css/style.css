@@ -670,6 +670,8 @@ header.scrolled .logo {
   transform: translate(-50%, -50%);
 }
 
+/* --------------- Blog Section Styling --------------- */
+
 @media(max-width: 767px) {
   .timeline-items::before {
     left: 7px;
@@ -688,24 +690,6 @@ header.scrolled .logo {
   .timeline-dot {
     left: 0;
   }
-}
-
-/* --------------- 1000px Screens --------------- */
-
-@media (max-width: 1000px) {
-  /* Add responsive styles for screens smaller than 1000px */
-}
-
-/* --------------- 768px Screens --------------- */
-
-@media (max-width: 768px) {
-  /* Add responsive styles for screens smaller than 768px */
-}
-
-/* --------------- 500px Screens --------------- */
-
-@media (max-width: 500px) {
-  /* Add responsive styles for screens smaller than 500px */
 }
 
 .blog {
@@ -816,9 +800,85 @@ header.scrolled .logo {
   left: 80%;
 }
 
-.blog .dots {
+/* --------------- Testimonials Section Styling --------------- */
+
+.testimonial {
+  padding: var(--section-padding) 0 calc(var(--section-padding) + 120px);
+}
+
+.testimonial .container {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  align-items: center;
+}
+
+.reviews {
+  width: 100%;
+  height: 400px;
+  background-color: #e4e4e4;
+  border-radius: 15px;
+}
+
+.testimonial-title {
+  padding-left: 5rem;
+}
+
+.testimonial-title > * {
+  color: #ffffff;
+}
+
+.section-background {
   position: absolute;
-  bottom: -7%;
-  left: 5%;
+  width: 100vw;
+  max-width: 75rem;
+  height: calc(100% + 120px);
+  background-color: var(--text-color);
   z-index: -1;
+  top: 15px;
+  left: 50%;
+  background-image: linear-gradient(124deg,
+      var(--heading-color) -50%,
+      var(--text-color));
+  transform: translateX(calc(-50% + 120px));
+  border-bottom-left-radius: 60px;
+}
+
+.section-background .person {
+  position: absolute;
+  height: 450px;
+  bottom: 0;
+  right: 0;
+}
+
+.section-background .circle {
+  position: absolute;
+  width: 170px;
+  left: 40%;
+  top: 79%;
+  transform: translate(-50%, -50%);
+}
+
+.section-background .square {
+  position: absolute;
+  left: 77%;
+  top: 15%;
+  transform: translate(-50%, -50%);
+}
+
+/* --------------- 1000px Screens --------------- */
+
+@media (max-width: 1000px) {
+  /* Add responsive styles for screens smaller than 1000px */
+}
+
+/* --------------- 768px Screens --------------- */
+
+@media (max-width: 768px) {
+  /* Add responsive styles for screens smaller than 768px */
+}
+
+/* --------------- 500px Screens --------------- */
+
+@media (max-width: 500px) {
+  /* Add responsive styles for screens smaller than 500px */
 }

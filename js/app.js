@@ -35,7 +35,7 @@ let sr = ScrollReveal({
 
 function hasReached(el) {
     let topPosition = el.getBoundingClientRect().top;
-    
+
     if (window.innerHeight >= topPosition + el.offsetHeight) return true;
     return false;
 }
@@ -60,7 +60,7 @@ function skillsCounter() {
 
     sk_counters.forEach((counter, i) => {
         let target = +counter.dataset.target;
-        let strokeValue = 427 - 427 * (target /100);
+        let strokeValue = 427 - 427 * (target / 100);
 
         progress_bars[i].style.setProperty("--target", strokeValue);
 

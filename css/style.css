@@ -131,6 +131,8 @@ ul {
   color: #ffffff;
   font-size: 0.85rem;
   letter-spacing: 0.4px;
+  min-height: 125px;
+  text-align: center;
   text-transform: capitalize;
   transition: 0.3s;
 }
@@ -452,6 +454,7 @@ header.scrolled .logo {
 }
 
 .skills-box {
+  position: relative;
   background-color: var(--text-color);
   padding: 5rem 6rem;
   border-radius: 20px;
@@ -535,6 +538,21 @@ header.scrolled .logo {
   margin-top: 0.75rem;
   font-weight: 400;
   font-size: 1rem;
+}
+
+.skills .dots {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.skills .square {
+  position: absolute;
+  top: 75%;
+  left: 100%;
+  transform: translate(-50%, -50%);
 }
 
 /* --------------- 1000px Screens --------------- */

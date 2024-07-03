@@ -652,7 +652,11 @@ header.scrolled .logo {
 .timeline-content p {
   line-height: 1.7rem;
   text-align: left;
-  margin: 0;
+  margin: 10px 0;
+}
+
+.timeline .btn {
+  padding: 0.7rem 1rem;
 }
 
 @media(max-width: 767px) {

@@ -4,37 +4,18 @@
 /* --------------- Website Theme --------------- */
 
 :root {
-  /* --hue-1: 257;
-  --hue-2: 47;
-  --main-color-1: hsl(var(--hue-1), 100%, 60%);
-  --main-color-dark-1: hsl(var(--hue-1), 69%, 50%);
-  --main-color-2: hsl(var(--hue-2), 100%, 61%);
-  --main-color-dark-2: hsl(var(--hue-2), 82%, 55%);
-  --section-padding: 7rem; */
-
+  /* Define color variables */
   --black: #000000;
-
-/*  */
-/* heading */
   --almost-black: #111111;
   --tinted-black: #222222;
-
-
   --light-black: #333333;
   --pale-black: #444444;
   --dark-gray: #555555;
-
-/*  */
   --shaded-gray: #666666;
   --medium-gray: #777777;
-
-
   --tinted-gray: #888888;
   --light-gray: #999999;
-
-  /* text */
   --pale-gray: #aaaaaa;
-
   --silver: #bbbbbb;
   --dark-white: #cccccc;
   --shaded-white: #dddddd;
@@ -44,26 +25,12 @@
 
 body {
   --heading-color: #000000;
-
-  /* --bg-color: hsl(var(--hue-1), 100%, 97%);
-  --bg-color-1: hsl(var(--hue-1), 100%, 95.5%);
-  --bg-color-2: #fff;
-  --bg-color-3: hsl(var(--hue-1), 100%, 98%);
-  --heading-color: hsl(var(--hue-1), 61%, 24%); */
-
   --bg-color-transparent: rgba(255, 255, 255, 0.6);
   --text-color: hsl(0, 0%, 59%);
 }
 
 body.dark {
-  /* --bg-color: hsl(var(--hue-1), 19%, 15%);
-  --bg-color-1: hsl(var(--hue-1), 21%, 11%);
-  --bg-color-2: hsl(var(--hue-1), 23%, 19%);
-  --bg-color-3: hsl(var(--hue-1), 23%, 24%);
-  --heading-color: hsl(var(--hue-1), 100%, 95%);
-   */
-   /* --bg-color-transparent: hsla(257, 23%, 19%, 0.6); */
-   --text-color: hsl(0, 0%, 59%);
+  --text-color: hsl(0, 0%, 59%);
 }
 
 /* --------------- General Styles --------------- */
@@ -255,10 +222,10 @@ header.scrolled .logo {
 .showcase-area .container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  height: calc(100vh -120px);
-  max-height: 600px;
+  height: calc(100vh - 120px);
+  max-height: 500px;
   align-items: center;
-  /* padding-top: 250px; */
+
 }
 
 .showcase-area .sub-heading {
@@ -326,33 +293,37 @@ header.scrolled .logo {
   width: 100%;
 }
 
-/* --------------- About Section Styling --------------- */
+.showcase-image {
+  position: relative;
+  height: 100%;
+  min-height: calc(100% + 120px);
+  background-color: var(--text-color);
+  margin-top: -120px;
+  border-radius: 0 0 80px 80px;
+}
 
-/* --------------- Skills Section Styling --------------- */
-
-/* --------------- Sevices Section Styling --------------- */
-
-/* --------------- Portfolio Section Styling --------------- */
-
-/* --------------- Testimonials Section Styling --------------- */
-
-/* --------------- Contact Section Styling --------------- */
-
-/* --------------- Subscription Section Styling --------------- */
-
-/* --------------- Footer Styling --------------- */
+.showcase-image .person {
+  position: absolute;
+  width: 95%;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
 
 /* --------------- 1000px Screens --------------- */
 
 @media (max-width: 1000px) {
+  /* Add responsive styles for screens smaller than 1000px */
 }
 
 /* --------------- 768px Screens --------------- */
 
 @media (max-width: 768px) {
+  /* Add responsive styles for screens smaller than 768px */
 }
 
 /* --------------- 500px Screens --------------- */
 
 @media (max-width: 500px) {
+  /* Add responsive styles for screens smaller than 500px */
 }

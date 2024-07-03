@@ -709,16 +709,19 @@ header.scrolled .logo {
   grid-template-rows: auto;
   grid-gap: 20px;
 }
+
 @media (min-width: 30em) {
   .band {
     grid-template-columns: 1fr 1fr;
- }
+  }
 }
+
 @media (min-width: 60em) {
   .band {
     grid-template-columns: repeat(4, 1fr);
- }
+  }
 }
+
 .card {
   background: white;
   text-decoration: none;
@@ -731,10 +734,12 @@ header.scrolled .logo {
   top: 0;
   transition: all 0.1s ease-in;
 }
+
 .card:hover {
   top: -2px;
   box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
 }
+
 .card article {
   padding: 20px;
   flex: 1;
@@ -742,12 +747,14 @@ header.scrolled .logo {
   flex-direction: column;
   justify-content: space-between;
 }
+
 .card h1 {
   font-size: 20px;
   margin: 0;
   color: #333;
   font-weight: 500;
 }
+
 .card p {
   flex: 1;
   line-height: 1.4;
@@ -755,6 +762,7 @@ header.scrolled .logo {
   font-size: 0.9rem;
   margin: 1rem 0;
 }
+
 .card span {
   font-size: 12px;
   font-weight: bold;
@@ -783,10 +791,11 @@ header.scrolled .logo {
 @media (min-width: 60em) {
   .item-1 {
     grid-column: 1 / span 2;
- }
+  }
+
   .item-1 h1 {
     font-size: 24px;
- }
+  }
 }
 
 .grayscale-background {
@@ -812,18 +821,64 @@ header.scrolled .logo {
   align-items: center;
 }
 
-.reviews {
+.swiper {
   width: 100%;
-  height: 400px;
   background-color: #e4e4e4;
   border-radius: 15px;
+  padding: 2rem 0 2.5rem;
+}
+
+.swiper-slide {
+  padding: 0 2.5rem;
+}
+
+.follower {
+  display: grid;
+  grid-template-columns: 85px 1fr;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.follower-info h4 {
+  font-weight: 500;
+  color: var(--heading-color);
+  margin-bottom: 0.3rem;
+  font-size: 1.05rem;
+}
+
+.follower-info h5 {
+  color: var(--text-color);
+  font-weight: 500;
+  font-size: 0.8rem;
+}
+
+.follower-info h5 a {
+  color: var(--text-color);
+}
+
+.swiper-slide .text {
+  display: block;
+  margin: 1.5rem 0 0;
+}
+
+.swiper-pagination {
+  position: static;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 10px;
+  margin-top: 3rem;
+}
+
+.follower img {
+  width: 100%;
 }
 
 .testimonial-title {
   padding-left: 5rem;
 }
 
-.testimonial-title > * {
+.testimonial-title>* {
   color: #ffffff;
 }
 
@@ -863,6 +918,16 @@ header.scrolled .logo {
   left: 77%;
   top: 15%;
   transform: translate(-50%, -50%);
+}
+
+.swiper-pagination-bullet {
+  background-color: var(--text-color);
+}
+
+.swiper-pagination-bullet-active {
+  background-color: hsl(0, 0%, 62%);
+  width: 10px;
+  height: 10px;
 }
 
 /* --------------- 1000px Screens --------------- */

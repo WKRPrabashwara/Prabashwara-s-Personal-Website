@@ -79,11 +79,17 @@ function skillsCounter() {
 
 sr.reveal(".timeline-item", { delay: 600 });
 
-/* --------------- Portfolio Filter Animation --------------- */
-
 /* --------------- Modal Pop Up Animation Animation --------------- */
 
-/* --------------- Modal Pop Up Animation Animation --------------- */
+const swiper = new Swiper('.swiper', {
+    loop: true,
+    speed: 500,
+    autoplay: true,
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+});
 
 /* --------------- Change Active Link On Scroll --------------- */
 

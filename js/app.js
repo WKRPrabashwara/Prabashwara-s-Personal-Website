@@ -77,7 +77,7 @@ function skillsCounter() {
 
 /* --------------- Timeline Animation --------------- */
 
-
+sr.reveal(".timeline-item", { delay: 600 });
 
 /* --------------- Portfolio Filter Animation --------------- */
 

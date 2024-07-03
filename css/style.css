@@ -23,7 +23,7 @@
   --almost-white: #eeeeee;
   --white: #ffffff;
 
-  --section-padding: 7rem; 
+  --section-padding: 7rem;
 }
 
 body {
@@ -557,6 +557,123 @@ header.scrolled .logo {
 
 /* --------------- Timeline Section Styling --------------- */
 
+.timeline .container {
+  display: grid;
+  grid-template-rows: auto auto;
+}
+
+.timeline .timeline-heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.timeline-section {
+  min-height: 100vh;
+  padding: 100px 15px;
+}
+
+.timeline-items {
+  max-width: 1000px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.timeline-items::before {
+  content: '';
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  background-color: #000000;
+  left: calc(50% - 1px);
+}
+
+.timeline-item {
+  margin-bottom: 40px;
+  width: 100%;
+  position: relative;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-item:nth-child(odd) {
+  padding-right: calc(50% + 30px);
+  text-align: right;
+}
+
+.timeline-item:nth-child(even) {
+  padding-left: calc(50% + 30px);
+}
+
+.timeline-dot {
+  height: 16px;
+  width: 16px;
+  background-color: #000000;
+  position: absolute;
+  left: calc(50% - 8px);
+  border-radius: 50%;
+  top: 10px;
+}
+
+.timeline-date {
+  font-size: 18px;
+  color: #000000;
+  margin: 6px 0 15px;
+  font-weight: 400;
+}
+
+.timeline-content {
+  background-color: #ffffff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  padding: 30px;
+  border-radius: 5px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.timeline-content:hover {
+  transform: scale(1.02);
+}
+
+.timeline-content h3 {
+  color: var(--heading-color);
+  font-weight: 600;
+  font-size: 1rem;
+  margin: 0 0 10px 0;
+  letter-spacing: 0.3px;
+}
+
+.timeline-content p {
+  line-height: 1.7rem;
+  text-align: left;
+  margin: 0;
+}
+
+@media(max-width: 767px) {
+  .timeline-items::before {
+    left: 7px;
+  }
+
+  .timeline-item:nth-child(odd) {
+    padding-right: 0;
+    text-align: left;
+  }
+
+  .timeline-item:nth-child(odd),
+  .timeline-item:nth-child(even) {
+    padding-left: 37px;
+  }
+
+  .timeline-dot {
+    left: 0;
+  }
+}
 
 /* --------------- 1000px Screens --------------- */
 

@@ -28,7 +28,9 @@
 <body>
 
     <header>
+
         <!-- --------- Navbar --------- -->
+
         <nav class="container">
             <a href="#" class="logo">Prabash<span>wara.</span></a>
 
@@ -36,27 +38,23 @@
                 <ul>
 
                     <li>
-                        <a href="" class="nav-link">Home</a>
+                        <a href="#home" class="nav-link">Home</a>
                     </li>
 
                     <li>
-                        <a href="" class="nav-link">About</a>
+                        <a href="#about" class="nav-link">About</a>
                     </li>
 
                     <li>
-                        <a href="" class="nav-link">Skills</a>
+                        <a href="#skills" class="nav-link">Skills</a>
                     </li>
 
                     <li>
-                        <a href="" class="nav-link">Blog</a>
+                        <a href="#blog" class="nav-link">Blog</a>
                     </li>
 
                     <li>
-                        <a href="" class="nav-link">Blog</a>
-                    </li>
-
-                    <li>
-                        <a href="" class="nav-link">Contact</a>
+                        <a href="#contact" class="nav-link">Contact</a>
                     </li>
 
                 </ul>
@@ -65,12 +63,13 @@
 
             </div>
         </nav>
+
     </header>
 
     <main>
         <!-- --------- Showcase Area Section --------- -->
 
-        <section class="showcase-area section">
+        <section class="showcase-area section" id="home">
             <img src="./assets/square-1.png" alt="Square" class="shape square">
             <div class="container">
 
@@ -101,7 +100,7 @@
 
         <!-- --------- About Section --------- -->
 
-        <section class="about section">
+        <section class="about section" id="about">
             <img src="./assets/triangle.png" class="shape triangle" alt="Triangle">
             <div class="container">
 
@@ -171,7 +170,7 @@
 
         <!-- --------- Skills Section --------- -->
 
-        <section class="skills section">
+        <section class="skills section" id="skills">
             <div class="container">
                 <div class="skills-box">
 
@@ -248,7 +247,7 @@
 
         <!-- --------- Timeline Section --------- -->
 
-        <section class="timeline section">
+        <section class="timeline section" id="timeline">
             <div class="container">
 
                 <div class="timeline-heading">
@@ -324,7 +323,7 @@
 
         <!-- --------- Blog Section --------- -->
 
-        <section class="blog section">
+        <section class="blog section" id="blog">
 
             <div class="blog-heading">
                 <img src="./assets/square-1.png" class="shape square" alt="Square">
@@ -436,7 +435,7 @@
 
         <!-- --------- Testimonials Section --------- -->
 
-        <section class="testimonial section">
+        <section class="testimonial section" id="testimonial">
             <div class="container">
                 <div class="section-background">
                     <img src="./assets/main-person-2.png" class="person grayscale-background" alt="Person">
@@ -522,7 +521,7 @@
 
         <!-- --------- Contact Section --------- -->
 
-        <section class="contact section">
+        <section class="contact section" id="contact">
             <img src="./assets/triangle.png" class="shape triangle" alt="Triangle">
             <div class="container">
                 <img src="./assets/square-2.png" alt="Square" class="shape square">
@@ -553,10 +552,44 @@
         </section>
 
         <!-- --------- Subscription Section --------- -->
+
+        <section class="subscription section" id="subscription">
+            <div class="container">
+                <img src="./assets/map.png" class="map grayscale-background" alt="Map">
+                <div class="sub-box">
+                    <img src="./assets/square-2.png" alt="Square" class="shape square">
+
+                    <div class="sub-info">
+                        <h3 class="sub-heading">Newsletter <i class='bx bxs-news bx-tada'></i></h3>
+                        <h1 class="heading">Get news about blog posts,</h1>
+                        <p class="text">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat voluptatum asperiores
+                            dolores beatae voluptates, quos, sapiente fugit perferendis dolore saepe accusantium neque.
+                            Quisquam maxime, dolores neque officia odio voluptatem excepturi.
+                        </p>
+                    </div>
+                    <form action="index.html">
+                        <input type="email" placeholder="Email" class="form-input" required>
+                        <input type="submit" value="Subscribe" class="btn">
+                    </form>
+                </div>
+            </div>
+        </section>
+
     </main>
 
-    <footer>
+    <footer id="footer">
         <!-- --------- Footer --------- -->
+
+        <div class="container">
+            <a href="#" class="logo">Prabash<span>wara.</span></a>
+            <p class="text">&copy; Copyright 2024. All right reserved</p>
+            <ul class="social-media">
+                <li class="social-link"><i class='bx bxl-github'></i></li>
+                <li class="social-link"><i class='bx bxl-twitter'></i></li>
+                <li class="social-link"><i class='bx bxl-linkedin'></i></li>
+            </ul>
+        </div>
     </footer>
 
     <!-- JavaScript Files -->

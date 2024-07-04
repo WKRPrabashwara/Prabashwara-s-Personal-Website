@@ -7,7 +7,7 @@ const progress_bars = document.querySelectorAll(".skills svg circle");
 
 const links = document.querySelectorAll(".nav-link");
 
-const humburger = document.querySelector("humburger");
+const humburger = document.querySelector(".humburger");
 
 window.addEventListener("scroll", () => {
     activeLink();

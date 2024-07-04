@@ -261,7 +261,7 @@ header.scrolled .logo {
 .humburger {
   padding: 1rem 0;
   height: 12px;
-  width: 12px;
+  width: 25px;
   box-sizing: content-box;
   cursor: pointer;
   position: relative;

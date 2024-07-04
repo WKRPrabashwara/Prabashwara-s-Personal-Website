@@ -4,6 +4,13 @@
 
 /* --------------- Website Theme --------------- */
 
+html,
+body {
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+
 :root {
   /* Define color variables */
   --black: #000000;

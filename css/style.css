@@ -81,6 +81,10 @@ ul {
 
 /* --------------- Reusable CSS Code --------------- */
 
+.grayscale-background {
+  filter: grayscale(100%);
+}
+
 .arrow {
   rotate: -70deg;
   position: absolute;
@@ -362,6 +366,7 @@ body.open .humburger .bar:last-child {
 
 .btn:hover {
   background-color: #222222;
+  color: #ffffff;
 }
 
 .btn.secondary-btn {
@@ -747,8 +752,6 @@ body.open .humburger .bar:last-child {
   transform: translate(-50%, -50%);
 }
 
-/* --------------- Blog Section Styling --------------- */
-
 @media(max-width: 767px) {
   .timeline-items::before {
     left: 7px;
@@ -769,114 +772,85 @@ body.open .humburger .bar:last-child {
   }
 }
 
+/* --------------- Blog Section Styling --------------- */
+
+.blog-heading .text {
+  color: #ffffff;
+}
+
+.blog .text-bg-dark {
+  margin-bottom: 24px;
+}
+
+.blog .main-blog-image {
+  object-fit: cover;
+  object-position: top center;
+  max-height: 500px;
+  filter: grayscale(95%);
+}
+
+.blog .card-img-top {
+  max-height: 50%;
+  object-fit: cover;
+  object-position: top center;
+  filter: grayscale(100%);
+}
+
+.blog .card{
+  cursor: pointer;
+}
+
+.blog .h-100{
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.blog .h-100:hover{
+  transform: scale(1.02);
+}
+
+.card-img-overlay .card-title{
+  font-weight: 600;
+  font-size: 16px;
+  color: #ffffff;
+}
+
+.blog .main-blog {
+  border: none;
+}
+
+.card-img-overlay .text{
+  font-weight: 200;
+  font-size: 14px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.col .card-title{
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--heading-color);
+}
+
+.col .text{
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+.col .text-body-secondary{
+  font-weight: 400;
+  font-size: 12px;
+  color: var(--text-color);
+}
+
+.blog .h-100 {
+  border: none;
+}
+
 .blog {
   background-color: var(--text-color);
-}
-
-.blog .text {
-  color: #fff;
-}
-
-.band {
-  width: 90%;
-  max-width: 1240px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto;
-  grid-gap: 20px;
-}
-
-@media (min-width: 30em) {
-  .band {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-@media (min-width: 60em) {
-  .band {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-
-.card {
-  background: white;
-  text-decoration: none;
-  color: #444;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
-  min-height: 100%;
-  position: relative;
-  top: 0;
-  transition: all 0.1s ease-in;
-}
-
-.card:hover {
-  top: -2px;
-  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
-}
-
-.card article {
-  padding: 20px;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.card h1 {
-  font-size: 20px;
-  margin: 0;
-  color: #333;
-  font-weight: 500;
-}
-
-.card p {
-  flex: 1;
-  line-height: 1.4;
-  color: var(--text-color);
-  font-size: 0.9rem;
-  margin: 1rem 0;
-}
-
-.card span {
-  font-size: 12px;
-  font-weight: bold;
-  color: #999;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  margin: 2em 0 0 0;
-}
-
-.card a {
-  font-size: 12px;
-  font-weight: bold;
-  color: #999;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  margin: 2em 0 0 0;
-  text-decoration: underline;
-}
-
-.card .thumb {
-  padding-bottom: 60%;
-  background-size: cover;
-  background-position: center center;
-}
-
-@media (min-width: 60em) {
-  .item-1 {
-    grid-column: 1 / span 2;
-  }
-
-  .item-1 h1 {
-    font-size: 24px;
-  }
-}
-
-.grayscale-background {
-  filter: grayscale(100%);
 }
 
 .blog .square {
@@ -884,6 +858,10 @@ body.open .humburger .bar:last-child {
   position: absolute;
   top: -2%;
   left: 80%;
+}
+
+.blog .cta {
+  justify-content: center;
 }
 
 /* --------------- Testimonials Section Styling --------------- */
@@ -1680,6 +1658,10 @@ footer .social-media {
     flex-basis: 100%;
     text-align: center;
     margin-top: 1rem;
+  }
+
+  .card-img-overlay .text{
+    display: none;
   }
 }
 

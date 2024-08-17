@@ -1,264 +1,717 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <title>Prabashwara's Personal Website - Blog</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <title>Prabashwara's Personal Website - Blog</title>
 
-    <!-- --------- Favicon --------- -->
-    <link rel="icon" type="image/x-icon" href="./assets/favicon.png">
+  <!-- --------- Favicon --------- -->
+  <link rel="icon" type="image/x-icon" href="./assets/favicon.png">
 
-    <!-- --------- Scroll Reveal Library --------- -->
-    <script src="https://unpkg.com/scrollreveal"></script>
+  <!-- --------- Scroll Reveal Library --------- -->
+  <script src="https://unpkg.com/scrollreveal"></script>
 
-    <!-- --------- Swiper Library --------- -->
-    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+  <!-- --------- Swiper Library --------- -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
 
-    <!-- --------- Unicons Icons --------- -->
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+  <!-- --------- Unicons Icons --------- -->
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 
-    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.css" rel="stylesheet" />
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
-    <!-- --------- CSS Files --------- -->
-    <link rel="stylesheet" href="./css/blog.css">
+  <!-- --------- CSS Files --------- -->
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+    :root {
+      --dark-one: #333;
+      --dark-two: #7a7a7a;
+      --main-color: #784cfb;
+      --light-one: #fff;
+      --light-two: #f9fafb;
+      --light-three: #f6f7fb;
+    }
+
+    /* Genral Styles */
+
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body,
+    button,
+    input,
+    textarea {
+      font-family: "Poppins", sans-serif;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    img {
+      width: 100%;
+    }
+
+    .container {
+      position: relative;
+      z-index: 5;
+      max-width: 92rem;
+      padding: 0 4rem;
+      margin: 0 auto;
+    }
+
+    .stop-scrolling {
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      align-items: center;
+      justify-content: center;
+    }
+
+    .text {
+      font-size: 1.25rem;
+      color: var(--dark-two);
+      line-height: 1.6;
+    }
+
+    .column-1 {
+      margin-right: 1.5rem;
+    }
+
+    .column-2 {
+      margin-left: 1.5rem;
+    }
+
+    .image {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .z-index {
+      position: relative;
+      z-index: 2;
+    }
+
+    .overlay {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      top: 0;
+      left: 0;
+    }
+
+    .overlay .shape {
+      width: initial;
+      opacity: 0.13;
+      position: absolute;
+    }
+
+    .overlay.overlay-lg .shape {
+      height: 55px;
+    }
+
+    .overlay.overlay-lg .shape.wave {
+      height: initial;
+      width: 88px;
+    }
+
+    .overlay.overlay-lg .shape.xshape {
+      height: 38px;
+    }
+
+    .overlay.overlay-sm .shape {
+      filter: brightness(0) invert(1);
+      opacity: 0.15;
+      height: 40px;
+    }
+
+    .overlay.overlay-sm .shape.wave {
+      height: initial;
+      width: 70px;
+    }
+
+    .overlay.overlay-sm .shape.xshape {
+      height: 30px;
+    }
+
+    .points {
+      opacity: 0.3;
+      position: absolute;
+    }
+
+    .section {
+      padding: 7rem 0;
+      overflow: hidden;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .title {
+      position: relative;
+      display: inline-block;
+      padding-bottom: 1rem;
+      line-height: 1;
+      font-size: 2.8rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .title:before {
+      content: attr(data-title);
+      display: block;
+      margin-bottom: 0.4rem;
+      color: var(--main-color);
+      font-size: 1.15rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+    }
+
+    .title:after {
+      content: "";
+      position: absolute;
+      width: 90px;
+      height: 5px;
+      border-radius: 3px;
+      background-color: var(--main-color);
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .section-header .text {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .title-sm {
+      color: var(--dark-one);
+      font-weight: 600;
+      font-size: 1.6rem;
+    }
+
+    .points-sq {
+      width: 210px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.85rem 2rem;
+      background-color: var(--main-color);
+      color: var(--light-one);
+      border-radius: 2rem;
+      font-size: 1.05rem;
+      text-transform: uppercase;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #6b44e0;
+    }
+
+    .btn.small {
+      padding: 0.7rem 1.8rem;
+      font-size: 1rem;
+    }
+
+    /* End Genral Styles */
+
+    /* Portfolio */
+
+    .portfolio {
+      position: relative;
+      width: 100%;
+      background-color: var(--light-two);
+    }
+
+    .background-bg {
+      position: absolute;
+      width: 100%;
+      height: 520px;
+      top: 0;
+      left: 0;
+      background-color: var(--main-color);
+    }
+
+    .portfolio .title,
+    .portfolio .title:before {
+      color: var(--light-one);
+    }
+
+    .portfolio .title:after {
+      background-color: var(--light-one);
+    }
+
+    .filter {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .filter-btn {
+      border: none;
+      outline: none;
+      background-color: transparent;
+      margin: 0.45rem 0.4rem;
+      padding: 0.85rem 1.8rem;
+      color: var(--light-one);
+      text-transform: uppercase;
+      font-weight: 500;
+      font-size: 1.1rem;
+      line-height: 1;
+      cursor: pointer;
+      border-radius: 2rem;
+      transition: 0.3s;
+    }
+
+    .filter-btn.active {
+      background-color: var(--light-one);
+      color: var(--main-color);
+    }
+
+    .portfolio .square {
+      top: 28%;
+      left: 20%;
+    }
+
+    .portfolio .circle {
+      top: 8%;
+      right: 35%;
+    }
+
+    .portfolio .triangle {
+      bottom: 10%;
+      right: 4%;
+    }
+
+    .portfolio .half-circle1 {
+      bottom: 13%;
+      left: 5%;
+    }
+
+    .portfolio .half-circle2 {
+      top: 35%;
+      right: 20%;
+    }
+
+    .portfolio .xshape {
+      top: 10%;
+      right: 8%;
+    }
+
+    .portfolio .wave {
+      top: 38%;
+      left: 6%;
+    }
+
+    .grid {
+      width: 100%;
+      margin: 1.5rem 0;
+    }
+
+    .grid-item {
+      width: 33.33%;
+      padding: 1rem 1.2rem;
+      display: flex;
+      justify-content: center;
+    }
+
+    .gallery-image {
+      position: relative;
+      overflow: hidden;
+      border-radius: 16px;
+      height: 330px;
+      width: 100%;
+      cursor: pointer;
+    }
+
+    .gallery-image img {
+      position: absolute;
+      height: 115%;
+      width: initial;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      transform-origin: center;
+      transition: 0.5s;
+    }
+
+    .gallery-image .img-overlay {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 2;
+      color: var(--light-one);
+      background-color: rgba(120, 76, 251, 0.55);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      padding: 2rem 3.2rem;
+      opacity: 0;
+      transition: 0.5s;
+    }
+
+    .img-overlay .plus {
+      position: relative;
+      margin: auto 0;
+    }
+
+    .plus:before,
+    .plus:after {
+      content: "";
+      position: absolute;
+      width: 4.5rem;
+      height: 3px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: var(--light-one);
+      border-radius: 3px;
+    }
+
+    .plus:before {
+      transform: translate(-50%, -50%) rotate(-90deg);
+    }
+
+    .img-description {
+      width: 100%;
+    }
+
+    .img-overlay h3 {
+      font-weight: 600;
+      text-transform: uppercase;
+      font-size: 1.5rem;
+    }
+
+    .img-overlay h5 {
+      font-size: 1.15rem;
+      font-weight: 300;
+    }
+
+    .gallery-image:hover .img-overlay {
+      opacity: 1;
+    }
+
+    .gallery-image:hover img {
+      transform: translate(-50%, -50%) scale(1.1);
+    }
+
+    .more-folio {
+      display: flex;
+      justify-content: center;
+    }
+  </style>
 
 </head>
+
 <body>
 
-    <div class="row row-cols-1 row-cols-md-4 g-4">
+  <section class="portfolio section" id="portfolio">
+    <div class="background-bg">
+      <div class="overlay overlay-sm">
+        <img src="./img/shapes/half-circle.png" class="shape half-circle1" alt="" />
+        <img src="./img/shapes/half-circle.png" class="shape half-circle2" alt="" />
+        <img src="./img/shapes/square.png" class="shape square" alt="" />
+        <img src="./img/shapes/wave.png" class="shape wave" alt="" />
+        <img src="./img/shapes/circle.png" class="shape circle" alt="" />
+        <img src="./img/shapes/triangle.png" class="shape triangle" alt="" />
+        <img src="./img/shapes/x.png" class="shape xshape" alt="" />
+      </div>
+    </div>
 
-        <div class="col">
-          <div class="card h-100">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            </div>
-            <div class="card-footer">
-              <small class="text-body-secondary">Last updated 3 mins ago</small>
-            </div>
-          </div>
-        </div>
-
-        <div class="col">
-            <div class="card h-100">
-              <img src="..." class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              </div>
-              <div class="card-footer">
-                <small class="text-body-secondary">Last updated 3 mins ago</small>
-              </div>
-            </div>
-          </div>
-
-          <div class="col">
-            <div class="card h-100">
-              <img src="..." class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              </div>
-              <div class="card-footer">
-                <small class="text-body-secondary">Last updated 3 mins ago</small>
-              </div>
-            </div>
-          </div>
-
-          <div class="col">
-            <div class="card h-100">
-              <img src="..." class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              </div>
-              <div class="card-footer">
-                <small class="text-body-secondary">Last updated 3 mins ago</small>
-              </div>
-            </div>
-          </div>
-
-          <div class="col">
-            <div class="card h-100">
-              <img src="..." class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              </div>
-              <div class="card-footer">
-                <small class="text-body-secondary">Last updated 3 mins ago</small>
-              </div>
-            </div>
-          </div>
-
-          <div class="col">
-            <div class="card h-100">
-              <img src="..." class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              </div>
-              <div class="card-footer">
-                <small class="text-body-secondary">Last updated 3 mins ago</small>
-              </div>
-            </div>
-          </div>
-
-        <div class="col">
-          <div class="card h-100">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-            </div>
-            <div class="card-footer">
-              <small class="text-body-secondary">Last updated 3 mins ago</small>
-            </div>
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="card h-100">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-            </div>
-            <div class="card-footer">
-              <small class="text-body-secondary">Last updated 3 mins ago</small>
-            </div>
-          </div>
-        </div>
-
-        <div class="col">
-            <div class="card h-100">
-              <img src="..." class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              </div>
-              <div class="card-footer">
-                <small class="text-body-secondary">Last updated 3 mins ago</small>
-              </div>
-            </div>
-          </div>
-  
-          <div class="col">
-              <div class="card h-100">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                </div>
-                <div class="card-footer">
-                  <small class="text-body-secondary">Last updated 3 mins ago</small>
-                </div>
-              </div>
-            </div>
-  
-            <div class="col">
-              <div class="card h-100">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                </div>
-                <div class="card-footer">
-                  <small class="text-body-secondary">Last updated 3 mins ago</small>
-                </div>
-              </div>
-            </div>
-  
-            <div class="col">
-              <div class="card h-100">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                </div>
-                <div class="card-footer">
-                  <small class="text-body-secondary">Last updated 3 mins ago</small>
-                </div>
-              </div>
-            </div>
-  
-            <div class="col">
-              <div class="card h-100">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                </div>
-                <div class="card-footer">
-                  <small class="text-body-secondary">Last updated 3 mins ago</small>
-                </div>
-              </div>
-            </div>
-  
-            <div class="col">
-              <div class="card h-100">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                </div>
-                <div class="card-footer">
-                  <small class="text-body-secondary">Last updated 3 mins ago</small>
-                </div>
-              </div>
-            </div>
-  
-          <div class="col">
-            <div class="card h-100">
-              <img src="..." class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-              </div>
-              <div class="card-footer">
-                <small class="text-body-secondary">Last updated 3 mins ago</small>
-              </div>
-            </div>
-          </div>
-  
-          <div class="col">
-            <div class="card h-100">
-              <img src="..." class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-              </div>
-              <div class="card-footer">
-                <small class="text-body-secondary">Last updated 3 mins ago</small>
-              </div>
-            </div>
-          </div>
-
+    <div class="container">
+      <div class="section-header">
+        <h3 class="title" data-title="My works">Portfolio</h3>
       </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
-        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
-    <script src="./js/mixitup.min.js"></script>
-    <script src="./js/app.js"></script>
+      <div class="section-body">
+        <div class="filter">
+          <button class="filter-btn active" data-filter="*">All</button>
+          <button class="filter-btn" data-filter=".ui">UI/UX</button>
+          <button class="filter-btn" data-filter=".webdev">Web Dev</button>
+          <button class="filter-btn" data-filter=".appdev">
+            Mobile App
+          </button>
+          <button class="filter-btn" data-filter=".logo-design">
+            Logo Design
+          </button>
+        </div>
+
+        <div class="grid">
+          <div class="grid-item logo-design">
+            <div class="gallery-image">
+              <img src="./img/portfolio/port1.jpg" alt="" />
+              <div class="img-overlay">
+                <div class="plus"></div>
+                <div class="img-description">
+                  <h3>Logo Design</h3>
+                  <h5>View Demo</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="grid-item webdev">
+            <div class="gallery-image">
+              <img src="./img/portfolio/port2.png" alt="" />
+              <div class="img-overlay">
+                <div class="plus"></div>
+                <div class="img-description">
+                  <h3>Web Development</h3>
+                  <h5>View Demo</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="grid-item ui webdev">
+            <div class="gallery-image">
+              <img src="./img/portfolio/port3.png" alt="" />
+              <div class="img-overlay">
+                <div class="plus"></div>
+                <div class="img-description">
+                  <h3>Web Design</h3>
+                  <h5>View Demo</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="grid-item ui">
+            <div class="gallery-image">
+              <img src="./img/portfolio/port4.png" alt="" />
+              <div class="img-overlay">
+                <div class="plus"></div>
+                <div class="img-description">
+                  <h3>UI / UX Design</h3>
+                  <h5>View Demo</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="grid-item logo-design">
+            <div class="gallery-image">
+              <img src="./img/portfolio/port5.jpg" alt="" />
+              <div class="img-overlay">
+                <div class="plus"></div>
+                <div class="img-description">
+                  <h3>Logo Design</h3>
+                  <h5>View Demo</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="grid-item appdev">
+            <div class="gallery-image">
+              <img src="./img/portfolio/port6.jpg" alt="" />
+              <div class="img-overlay">
+                <div class="plus"></div>
+                <div class="img-description">
+                  <h3>App Development</h3>
+                  <h5>View Demo</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="grid-item logo-design">
+            <div class="gallery-image">
+              <img src="./img/portfolio/port7.jpg" alt="" />
+              <div class="img-overlay">
+                <div class="plus"></div>
+                <div class="img-description">
+                  <h3>Logo Design</h3>
+                  <h5>View Demo</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="grid-item appdev ui">
+            <div class="gallery-image">
+              <img src="./img/portfolio/port8.png" alt="" />
+              <div class="img-overlay">
+                <div class="plus"></div>
+                <div class="img-description">
+                  <h3>App Development</h3>
+                  <h5>View Demo</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="grid-item ui webdev">
+            <div class="gallery-image">
+              <img src="./img/portfolio/port9.png" alt="" />
+              <div class="img-overlay">
+                <div class="plus"></div>
+                <div class="img-description">
+                  <h3>Web Design</h3>
+                  <h5>View Demo</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="more-folio">
+          <a href="#" class="btn">More Folio</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+    integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <script src="./js/mixitup.min.js"></script>
+  <script>
+    const filter_btns = document.querySelectorAll(".filter-btn");
+    const skills_wrap = document.querySelector(".skills");
+    const skills_bars = document.querySelectorAll(".skill-progress");
+    const records_wrap = document.querySelector(".records");
+    const records_numbers = document.querySelectorAll(".number");
+    const footer_input = document.querySelector(".footer-input");
+    const hamburger_menu = document.querySelector(".hamburger-menu");
+    const navbar = document.querySelector("header nav");
+    const links = document.querySelectorAll(".links a");
+
+    footer_input.addEventListener("focus", () => {
+      footer_input.classList.add("focus");
+    });
+
+    footer_input.addEventListener("blur", () => {
+      if (footer_input.value != "") return;
+      footer_input.classList.remove("focus");
+    });
+
+    function closeMenu() {
+      navbar.classList.remove("open");
+      document.body.classList.remove("stop-scrolling");
+    }
+
+    hamburger_menu.addEventListener("click", () => {
+      if (!navbar.classList.contains("open")) {
+        navbar.classList.add("open");
+        document.body.classList.add("stop-scrolling");
+      } else {
+        closeMenu();
+      }
+    });
+
+    links.forEach((link) => link.addEventListener("click", () => closeMenu()));
+
+    filter_btns.forEach((btn) =>
+      btn.addEventListener("click", () => {
+        filter_btns.forEach((button) => button.classList.remove("active"));
+        btn.classList.add("active");
+
+        let filterValue = btn.dataset.filter;
+
+        $(".grid").isotope({ filter: filterValue });
+      })
+    );
+
+    $(".grid").isotope({
+      itemSelector: ".grid-item",
+      layoutMode: "fitRows",
+      transitionDuration: "0.6s",
+    });
+
+    window.addEventListener("scroll", () => {
+      skillsEffect();
+      countUp();
+    });
+
+    function checkScroll(el) {
+      let rect = el.getBoundingClientRect();
+      if (window.innerHeight >= rect.top + el.offsetHeight) return true;
+      return false;
+    }
+
+    function skillsEffect() {
+      if (!checkScroll(skills_wrap)) return;
+      skills_bars.forEach((skill) => (skill.style.width = skill.dataset.progress));
+    }
+
+    function countUp() {
+      if (!checkScroll(records_wrap)) return;
+      records_numbers.forEach((numb) => {
+        const updateCount = () => {
+          let currentNum = +numb.innerText;
+          let maxNum = +numb.dataset.num;
+          let speed = 100;
+          const increment = Math.ceil(maxNum / speed);
+
+          if (currentNum < maxNum) {
+            numb.innerText = currentNum + increment;
+            setTimeout(updateCount, 1);
+          } else {
+            numb.innerText = maxNum;
+          }
+        };
+
+        setTimeout(updateCount, 400);
+      });
+    }
+
+    var mySwiper = new Swiper(".swiper-container", {
+      speed: 1100,
+      slidesPerView: 1,
+      loop: true,
+      autoplay: {
+        delay: 5000,
+      },
+      navigation: {
+        prevEl: ".swiper-button-prev",
+        nextEl: ".swiper-button-next",
+      },
+    });
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="./js/isotope.pkgd.min.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </body>
+
 </html>

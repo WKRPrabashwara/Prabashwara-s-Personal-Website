@@ -133,15 +133,15 @@ links.forEach((link) =>
     })
 );
 
-/* ---------- Scrool Smoothing ----------- */ 
 
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
 
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
-});
 
+
+// document.getElementById("submit-btn").addEventListener("click", function(event){
+//     event.preventDefault();
+//    handleFireButton();
+// });
+
+document.getElementById('submit-btn').onsubmit = function () {
+    return alert('Are you sure you want to send these');
+}

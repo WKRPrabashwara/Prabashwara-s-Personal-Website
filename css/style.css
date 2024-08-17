@@ -15,7 +15,6 @@ body {
 }
 
 body input:focus,
-body button:focus,
 body textarea:focus {
   outline: none !important;
   box-shadow: none !important;
@@ -177,6 +176,16 @@ ul {
   outline: none;
   font-family: inherit;
   cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #222222;
+  color: #ffffff;
+}
+
+.btn:active {
+  background-color: #222222da !important;
+  color: #ffffff !important;
 }
 
 .section {
@@ -370,11 +379,6 @@ body.open .humburger .bar:last-child {
 
 .cta .btn {
   margin-right: 1.5rem;
-}
-
-.btn:hover {
-  background-color: #222222;
-  color: #ffffff;
 }
 
 .btn.secondary-btn {
@@ -1199,6 +1203,11 @@ footer .social-media {
 .social-link:hover {
   background-color: #aaaaaa;
 }
+
+
+
+
+
 
 /* --------------- 1000px Screens --------------- */
 

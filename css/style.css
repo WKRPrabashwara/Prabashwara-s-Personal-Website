@@ -11,6 +11,14 @@ body {
   padding: 0;
   margin: 0;
   overflow-x: hidden;
+  cursor: default;
+}
+
+body input:focus,
+body button:focus,
+body textarea:focus {
+  outline: none !important;
+  box-shadow: none !important;
 }
 
 :root {
@@ -709,8 +717,21 @@ body.open .humburger .bar:last-child {
 .timeline-date {
   font-size: 18px;
   color: #000000;
-  margin: 6px 0 15px;
+  margin-top: 6px;
   font-weight: 400;
+}
+
+.timeline-month {
+  font-size: 14px;
+  color: #000000;
+  font-weight: 400;
+  margin-bottom: 6px;
+}
+
+.timeline-more {
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: underline;
 }
 
 .timeline-content {
@@ -733,12 +754,20 @@ body.open .humburger .bar:last-child {
   letter-spacing: 0.3px;
   font-weight: bold;
   letter-spacing: 0.05em;
+  line-height: 1.7rem;
 }
 
 .timeline-content p {
   line-height: 1.7rem;
-  text-align: left;
   margin: 10px 0;
+}
+
+.timeline-content p:nth-child(odd) {
+  text-align: left;
+}
+
+.timeline-content p:nth-child(even) {
+  text-align: right;
 }
 
 .timeline .btn {
@@ -1033,6 +1062,11 @@ body.open .humburger .bar:last-child {
   line-height: 0.9;
 }
 
+.form-group {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
 .form-input {
   display: inline-block;
   padding: 0.9rem 1.5rem;
@@ -1086,7 +1120,7 @@ textarea.form-input {
   transform: translate(-50%, -50%);
 }
 
-/* --------------- Contact Section Styling --------------- */
+/* --------------- Subscribe Section Styling --------------- */
 
 .subscription {
   overflow: hidden;
@@ -1159,6 +1193,7 @@ footer .social-media {
   align-items: center;
   justify-content: center;
   transition: 0.3s;
+  cursor: pointer;
 }
 
 .social-link:hover {
@@ -1587,6 +1622,10 @@ footer .social-media {
 
   .subscription .square {
     display: none;
+  }
+  
+  .timeline-content p:nth-child(even) {
+    text-align: left;
   }
 }
 

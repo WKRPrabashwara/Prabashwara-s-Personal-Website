@@ -142,6 +142,4 @@ links.forEach((link) =>
 //    handleFireButton();
 // });
 
-document.getElementById('submit-btn').onsubmit = function () {
-    return alert('Are you sure you want to send these');
-}
+

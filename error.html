@@ -16,6 +16,146 @@
   <!-- --------- Unicons Icons --------- -->
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 
+  <style>
+    @import url("https://fonts.googleapis.com/css?family=Nunito+Sans");
+
+    :root {
+      --blue: #000000;
+      --white: #fff;
+    }
+
+    html,
+    body {
+      height: 100%;
+    }
+
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: "Nunito Sans";
+      color: var(--blue);
+      font-size: 1em;
+    }
+
+    button {
+      font-family: "Nunito Sans";
+    }
+
+    ul {
+      list-style-type: none;
+      -webkit-padding-start: 35px;
+      padding-inline-start: 35px;
+    }
+
+    svg {
+      width: 100%;
+      visibility: hidden;
+    }
+
+    h1 {
+      font-size: 7.5em;
+      margin: 15px 0px;
+      font-weight: bold;
+    }
+
+    h2 {
+      font-weight: bold;
+    }
+
+    .hamburger-menu {
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 35px;
+      z-index: 2;
+    }
+
+    .hamburger-menu button {
+      position: relative;
+      width: 30px;
+      height: 22px;
+      border: none;
+      background: none;
+      padding: 0;
+      cursor: pointer;
+    }
+
+    .hamburger-menu button span {
+      position: absolute;
+      height: 3px;
+      background: #000;
+      width: 100%;
+      left: 0px;
+      top: 0px;
+      transition: 0.1s ease-in;
+    }
+
+    .hamburger-menu button span:nth-child(2) {
+      top: 9px;
+    }
+
+    .hamburger-menu button span:nth-child(3) {
+      top: 18px;
+    }
+
+    .hamburger-menu [data-state=open] span:first-child {
+      transform: rotate(45deg);
+      top: 10px;
+    }
+
+    .hamburger-menu [data-state=open] span:nth-child(2) {
+      width: 0%;
+      opacity: 0;
+    }
+
+    .hamburger-menu [data-state=open] span:nth-child(3) {
+      transform: rotate(-45deg);
+      top: 10px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.9rem 1.75rem;
+      border-radius: 17px;
+      background-color: #000000;
+      color: #ffffff;
+      font-size: 0.85rem;
+      letter-spacing: 0.4px;
+      min-width: 125px;
+      text-align: center;
+      text-transform: capitalize;
+      transition: 0.3s;
+      border: none;
+      outline: none;
+      font-family: inherit;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    a,
+    a:hover,
+    a:focus,
+    a:active {
+      text-decoration: none;
+      color: #ffffff;
+    }
+
+    .btn:hover {
+      opacity: 0.9;
+    }
+
+    @media screen and (max-width: 768px) {
+      body {
+        display: block;
+      }
+
+      .container {
+        margin-top: 70px;
+        margin-bottom: 70px;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -285,15 +425,112 @@
             How you got here is a mystery. But you can click the button below
             to go back to the homepage.
           </p>
-          <button class="btn">HOME</button>
+          <a href="./index.html" class="btn">Home</a>
         </div>
       </div>
     </div>
   </main>
   <!-- partial -->
   <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.1.1/gsap.min.js'></script>
-  <script src="./script.js"></script>
 
+  <script>
+    gsap.set("svg", { visibility: "visible" });
+    gsap.to("#headStripe", {
+      y: 0.5,
+      rotation: 1,
+      yoyo: true,
+      repeat: -1,
+      ease: "sine.inOut",
+      duration: 1
+    });
+
+    gsap.to("#spaceman", {
+      y: 0.5,
+      rotation: 1,
+      yoyo: true,
+      repeat: -1,
+      ease: "sine.inOut",
+      duration: 1
+    });
+
+    gsap.to("#craterSmall", {
+      x: -3,
+      yoyo: true,
+      repeat: -1,
+      duration: 1,
+      ease: "sine.inOut"
+    });
+
+    gsap.to("#craterBig", {
+      x: 3,
+      yoyo: true,
+      repeat: -1,
+      duration: 1,
+      ease: "sine.inOut"
+    });
+
+    gsap.to("#planet", {
+      rotation: -2,
+      yoyo: true,
+      repeat: -1,
+      duration: 1,
+      ease: "sine.inOut",
+      transformOrigin: "50% 50%"
+    });
+
+
+    gsap.to("#starsBig g", {
+      rotation: "random(-30,30)",
+      transformOrigin: "50% 50%",
+      yoyo: true,
+      repeat: -1,
+      ease: "sine.inOut"
+    });
+
+    gsap.fromTo(
+      "#starsSmall g",
+      { scale: 0, transformOrigin: "50% 50%" },
+      { scale: 1, transformOrigin: "50% 50%", yoyo: true, repeat: -1, stagger: 0.1 });
+
+    gsap.to("#circlesSmall circle", {
+      y: -4,
+      yoyo: true,
+      duration: 1,
+      ease: "sine.inOut",
+      repeat: -1
+    });
+
+    gsap.to("#circlesBig circle", {
+      y: -2,
+      yoyo: true,
+      duration: 1,
+      ease: "sine.inOut",
+      repeat: -1
+    });
+
+
+    gsap.set("#glassShine", { x: -68 });
+
+    gsap.to("#glassShine", {
+      x: 80,
+      duration: 2,
+      rotation: -30,
+      ease: "expo.inOut",
+      transformOrigin: "50% 50%",
+      repeat: -1,
+      repeatDelay: 8,
+      delay: 2
+    });
+
+
+    const burger = document.querySelector('.burger');
+    const nav = document.querySelector('nav');
+
+    burger.addEventListener('click', e => {
+      burger.dataset.state === 'closed' ? burger.dataset.state = "open" : burger.dataset.state = "closed";
+      nav.dataset.state === "closed" ? nav.dataset.state = "open" : nav.dataset.state = "closed";
+    });
+  </script>
 </body>
 
 </html>
